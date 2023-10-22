@@ -1,7 +1,7 @@
 # gerenciador-academia
 
 
-figma: https://www.figma.com/file/SoXNbYt81v7WZjeq0HhZ9S/UTFPR-GYM?type=design&node-id=0%3A1&mode=design&t=vfQvTYsReWKhWsA8-1
+figma: https://www.figma.com/file/SoXNbYt81v7WZjeq0HhZ9S/UTFPR-GYM?type=design&node-id=0%3A1&mode=design&t=o5BBXq7ZUkhFyTbf-1
 
 # Checklist
 
