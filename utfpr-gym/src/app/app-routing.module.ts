@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdicionarComponent} from 'src/app/adicionar/adicionar.component';
 
 const routes: Routes = [
-  {path: 'adicionar',
-   component: AdicionarComponent}
+  {
+    path: 'adicionar',
+    component: AdicionarComponent
+  }
 ];
 
 @NgModule({

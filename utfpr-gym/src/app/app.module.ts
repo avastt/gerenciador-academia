@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component'
@@ -11,6 +13,8 @@ import { AppMainScreenComponent } from './app-main-screen/app-main-screen.compon
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AdicionarComponent } from 'src/app/adicionar/adicionar.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { ClienteComponent } from './cliente/cliente.component';
+import { AddComponent } from './add/add.component';
 
 
 
@@ -20,9 +24,12 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     AppHeaderComponent,
     AppMainScreenComponent,
     AppFooterComponent,
-    AdicionarComponent
+    AdicionarComponent,
+    ClienteComponent,
+    AddComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     NgxMaskDirective,

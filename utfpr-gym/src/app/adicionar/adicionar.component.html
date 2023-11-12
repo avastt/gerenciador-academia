@@ -1,33 +1,45 @@
 <form class="row g-3">
     <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="email">
     </div>
     <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Nome</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      <label for="inputNome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="inputNome" name="nome" [(ngModel)]="nome">
     </div>
     <div class="col-md-1">
       <label for="inputNascimento" class="form-label">Nascimento</label>
-      <input type="text" class="form-control" id="inputNascimento" mask="d0/M0/0000">
+      <input type="text" class="form-control" id="inputNascimento" mask="d0/M0/0000" name="nascimento" [(ngModel)]="nascimento">
     </div>
     <div class="col-12">
-      <label for="inputAddress" class="form-label">Endereço</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <label for="inputEndereco" class="form-label">Endereço</label>
+      <input type="text" class="form-control" id="inputEndereco" placeholder="1234 Main St" name="endereco" [(ngModel)]="endereco">
     </div>
     <div class="col-3">
-      <label for="inputAddress2" class="form-label">Complemento</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      <label for="inputComplemento" class="form-label">Complemento</label>
+      <input type="text" class="form-control" id="inputComplemento" placeholder="Apartment, studio, or floor" name="complemento" [(ngModel)]="complemento">
     </div>
     <div class="col-md-3">
-      <label for="inputCity" class="form-label">Cidade</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="inputCidade" class="form-label">Cidade</label>
+      <input type="text" class="form-control" id="inputCidade" [(ngModel)]="cidade" name="cidade">
     </div>
     <div class="col-md-2">
-      <label for="inputZip" class="form-label">CEP</label>
-      <input type="text" class="form-control" id="inputZip">
+      <label for="inputCep" class="form-label">CEP</label>
+      <input type="text" class="form-control" id="inputCep" [(ngModel)]="cep" name="cep">
     </div>
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Adicionar</button>
+      <button type="submit" class="btn btn-primary" (click)="onClick()">
+        <app-add [name] = "adicionar">
+        </app-add>
+      </button>
     </div>
   </form>
+
+  
+
+
+
+  <!--    <div class="col-12">
+      <button type="submit" class="btn btn-primary" [routerLink]="['/enviarCliente']"
+       [queryParams]="{email:this.email, nome:this.nome, nascimento:this.nascimento, endereco:this.endereco, complemento:this.complemento, cidade:this.cidade, cep:this.cep}">Adicionar</button>
+    </div>-->
