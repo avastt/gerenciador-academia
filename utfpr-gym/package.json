@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href=/utfpr-gym/",
-    "ghpages": "angular-cli-ghpage --dir=dist/utfpr-gym",
+    "ghpages": "angular-cli-ghpages --dir=dist/utfpr-gym",
     "deploy": "npm run build & npm run ghpages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
