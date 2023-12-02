@@ -28,3 +28,4 @@ figma: https://www.figma.com/file/SoXNbYt81v7WZjeq0HhZ9S/UTFPR-GYM?type=design&n
 
 
 Ghpages: https://avastt.github.io/gerenciador-academia/
+Apresentação: https://www.loom.com/share/78e1b32f43984b4fac5ac0710ba16940?sid=04d6032f-cfe1-43b8-a7ae-6d232ffe8280
