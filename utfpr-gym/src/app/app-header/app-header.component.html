@@ -1,0 +1,29 @@
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-sm" style="background-color: #002979;">
+    <div class="container-fluid">
+      <ul class="navbar-nav navbar-divider">
+        <li class="nav-item">
+            <a class="navbar-brand mx-5" href="#">
+                <img src="/assets/utfprgym.png" alt="Avatar Logo" style="width:180px;" class="rounded-pill"> 
+              </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav container-fluid justify-content-center">
+        <div class="navbar navbar-expand-sm">
+            <li class="nav-item mx-5">
+                <button type="button" class="btn btn-outline-primary btn-lg" routerLink="/adicionar" style="color: azure;" [hidden]="this.isHiddenPanel">Adicionar</button>
+            </li>
+            <li class="nav-item mx-5">
+                <button type="button" class="btn btn-outline-primary btn-lg" routerLink="/listar" style="color: azure;">Listar</button>
+            </li>
+            <li class="nav-item mx-5">
+              <button type="button" class="btn btn-outline-primary btn-lg" routerLink="/alterar" style="color: azure;">Alterar</button>
+          </li>
+            <li class="nav-item mx-5">
+                <button type="button" class="btn btn-outline-primary btn-lg" routerLink="/deletar" style="color: azure;">Excluir</button>
+            </li>
+        </div>
+      </ul>
+    </div>
+  </nav>
+  

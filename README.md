@@ -4,7 +4,6 @@
 figma: https://www.figma.com/file/SoXNbYt81v7WZjeq0HhZ9S/UTFPR-GYM?type=design&node-id=0%3A1&mode=design&t=o5BBXq7ZUkhFyTbf-1
 
 # Checklist
-
 - [x] Criar um repositório no GitHub com a estrutura do Gitflow, incluindo pelo menos as branches principais "main" e "develop."
 - [x] Utilizar componentes de um framework CSS, como Bootstrap, Materialize ou outro à sua escolha.
 - [x] Apresentar as telas com layout responsivo, adaptando-se a diferentes tamanhos de tela, usando um framework CSS ou implementações personalizadas.
@@ -25,4 +24,4 @@ figma: https://www.figma.com/file/SoXNbYt81v7WZjeq0HhZ9S/UTFPR-GYM?type=design&n
 - [ ] Aplicar a diretiva estrutural ngFor para apresentar uma lista dinâmica de dados em seu aplicativo.
 - [ ] Utilizar a diretiva ngIf para controlar a exibição ou ocultação de elementos com base em condições específicas.
 - [ ] Formatar a apresentação de dados com Pipes, de acordo com os requisitos do aplicativo.
-- [ ] Executar o processo de build da aplicação e realizar o deploy para tornar o aplicativo acessível online.
+- [x] Executar o processo de build da aplicação e realizar o deploy para tornar o aplicativo acessível online.
