@@ -13,8 +13,10 @@ import { AppMainScreenComponent } from './app-main-screen/app-main-screen.compon
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AdicionarComponent } from 'src/app/adicionar/adicionar.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
-import { ClienteComponent } from './cliente/cliente.component';
 import { AddComponent } from './add/add.component';
+import { ListarComponent } from './listar/listar.component';
+import { AlterarComponent } from './alterar/alterar.component';
+import { DeletarComponent } from './deletar/deletar.component';
 
 
 
@@ -25,8 +27,10 @@ import { AddComponent } from './add/add.component';
     AppMainScreenComponent,
     AppFooterComponent,
     AdicionarComponent,
-    ClienteComponent,
-    AddComponent
+    ListarComponent,
+    AddComponent,
+    AlterarComponent,
+    DeletarComponent
   ],
   imports: [
     FormsModule,

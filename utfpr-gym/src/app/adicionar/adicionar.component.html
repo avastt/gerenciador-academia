@@ -13,11 +13,11 @@
     </div>
     <div class="col-12">
       <label for="inputEndereco" class="form-label">Endereço</label>
-      <input type="text" class="form-control" id="inputEndereco" placeholder="1234 Main St" name="endereco" [(ngModel)]="endereco">
+      <input type="text" class="form-control" id="inputEndereco" placeholder="Rua exemplo 123" name="endereco" [(ngModel)]="endereco">
     </div>
     <div class="col-3">
       <label for="inputComplemento" class="form-label">Complemento</label>
-      <input type="text" class="form-control" id="inputComplemento" placeholder="Apartment, studio, or floor" name="complemento" [(ngModel)]="complemento">
+      <input type="text" class="form-control" id="inputComplemento" placeholder="Apartamento, casa, bloco" name="complemento" [(ngModel)]="complemento">
     </div>
     <div class="col-md-3">
       <label for="inputCidade" class="form-label">Cidade</label>
@@ -25,7 +25,7 @@
     </div>
     <div class="col-md-2">
       <label for="inputCep" class="form-label">CEP</label>
-      <input type="text" class="form-control" id="inputCep" [(ngModel)]="cep" name="cep">
+      <input type="text" class="form-control" id="inputCep" [(ngModel)]="cep" name="cep" >
     </div>
     <div class="col-12">
       <button type="submit" class="btn btn-primary" (click)="onClick()">
