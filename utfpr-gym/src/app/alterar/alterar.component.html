@@ -1,0 +1,35 @@
+<form class="row g-3">
+    <div class="col-md-6">
+        <label for="updateEmail" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="updateEmail" name="updateEmail" [(ngModel)]="updateEmail">
+      </div>
+    <div class="col-md-6">
+      <label for="updateNome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="updateNome" name="nome" [(ngModel)]="updateNome">
+    </div>
+    <div class="col-md-1">
+      <label for="updateNascimento" class="form-label">Nascimento</label>
+      <input type="text" class="form-control" id="updateNascimento" mask="d0/M0/0000" name="updateNascimento" [(ngModel)]="updateNascimento">
+    </div>
+    <div class="col-12">
+      <label for="updateEndereco" class="form-label">Endereço</label>
+      <input type="text" class="form-control" id="updateEndereco" placeholder="Rua exemplo 123" name="updateEndereco" [(ngModel)]="updateEndereco">
+    </div>
+    <div class="col-3">
+      <label for="updateComplemento" class="form-label">Complemento</label>
+      <input type="text" class="form-control" id="updateComplemento" placeholder="Apartamento, casa, bloco" name="updateComplemento" [(ngModel)]="updateComplemento">
+    </div>
+    <div class="col-md-3">
+      <label for="updateCidade" class="form-label">Cidade</label>
+      <input type="text" class="form-control" id="updateCidade" [(ngModel)]="updateCidade" name="updateCidade">
+    </div>
+    <div class="col-md-2">
+      <label for="updateCep" class="form-label">CEP</label>
+      <input type="text" class="form-control" id="updateCep" [(ngModel)]="updateCep" name="updateCep" >
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary" (click)="onClick()">
+            Alterar
+        </button>
+      </div>
+</form>

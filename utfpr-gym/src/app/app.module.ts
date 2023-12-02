@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component'
@@ -11,6 +13,10 @@ import { AppMainScreenComponent } from './app-main-screen/app-main-screen.compon
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AdicionarComponent } from 'src/app/adicionar/adicionar.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { AddComponent } from './add/add.component';
+import { ListarComponent } from './listar/listar.component';
+import { AlterarComponent } from './alterar/alterar.component';
+import { DeletarComponent } from './deletar/deletar.component';
 
 
 
@@ -20,9 +26,14 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     AppHeaderComponent,
     AppMainScreenComponent,
     AppFooterComponent,
-    AdicionarComponent
+    AdicionarComponent,
+    ListarComponent,
+    AddComponent,
+    AlterarComponent,
+    DeletarComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     NgxMaskDirective,
