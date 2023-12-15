@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Cliente } from './Cliente';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +20,21 @@ export class LocalStorageService {
     }
     return false;
   }
+
+ /* saveList(key: string, list: Cliente[]): void {
+    const listAsString = JSON.stringify(list);
+    this.storage.setItem(key, listAsString);
+  } 
+
+  getList(key: string): Cliente[] | null {
+    const storedData = this.storage.getItem(key);
+
+    if (storedData) {
+      return JSON.parse(storedData) as Cliente[];
+    }
+
+    return null;
+  } */
 
   get(key: string): any {
     if (this.storage) {

@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { LocalStorageService } from '../local-storage.service';
+import { Cliente } from '../Cliente';
 
 @Component({
   selector: 'app-adicionar',
@@ -7,16 +8,33 @@ import { LocalStorageService } from '../local-storage.service';
   styleUrls: ['./adicionar.component.css']
 })
 export class AdicionarComponent implements OnInit, OnChanges {
-    adicionar: 'adicionar'
 
-    email: string
-    nome: string
-    nascimento: string
-    endereco: string
-    complemento: string
-    cidade: string
-    cep: string
-  
+  listaDeClientes: Cliente[] = [];
+  clienteAtual: Cliente = new Cliente('', '', '', '', '', '', ''); // Objeto temporário para armazenar dados do formulário
+
+  salvarCliente() {
+    // Obtém a lista inicial do LocalStorage
+    this.listaDeClientes = this.storageService.get("clientes") || [];
+
+    // Adiciona o cliente atual à lista
+    this.listaDeClientes.push(
+      new Cliente(
+        this.clienteAtual.email,
+        this.clienteAtual.nome,
+        this.clienteAtual.nascimento,
+        this.clienteAtual.endereco,
+        this.clienteAtual.complemento,
+        this.clienteAtual.cidade,
+        this.clienteAtual.cep
+      )
+    );
+
+    console.log(this.listaDeClientes)
+
+    this.storageService.set("clientes", this.listaDeClientes)
+  }
+
+   adicionar: 'adicionar'
 
   constructor(private storageService: LocalStorageService){}
 
@@ -26,15 +44,5 @@ export class AdicionarComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     
-  }
-
-  onClick(): void {
-    this.storageService.set("nome", this.nome)
-    this.storageService.set("email", this.email)
-    this.storageService.set("nascimento", this.nascimento)
-    this.storageService.set("endereco", this.endereco)
-    this.storageService.set("complemento", this.complemento)
-    this.storageService.set("cidade", this.cidade)
-    this.storageService.set("cep", this.cep)
   }
 }
