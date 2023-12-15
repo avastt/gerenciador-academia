@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LocalStorageService } from '../local-storage.service';
+import { Cliente } from '../Cliente';
 
 @Component({
   selector: 'app-deletar',
@@ -8,16 +9,24 @@ import { LocalStorageService } from '../local-storage.service';
 })
 export class DeletarComponent {
 
-  constructor(private storageService: LocalStorageService){
+  email: String;
+  listaDeClientes: Cliente[] = [];
+
+  deletarCliente() {
+    // Obtém a lista inicial do LocalStorage
+    this.listaDeClientes = this.storageService.get("clientes") || [];
+
+    const indiceCliente = this.listaDeClientes.findIndex(cliente => cliente.email === this.email);
+
+    // Se o cliente existir, deleta os dados
+    if (indiceCliente !== -1) {
+      this.listaDeClientes.splice(indiceCliente, 1);
+      this.storageService.set("clientes", this.listaDeClientes);
+    } else {
+      console.error('Cliente não encontrado para remoção.');
+    }
   }
 
-  onClick(): void {
-    this.storageService.remove("email");
-    this.storageService.remove("nome");
-    this.storageService.remove("nascimento");
-    this.storageService.remove("endereco");
-    this.storageService.remove("complemento");
-    this.storageService.remove("cidade");
-    this.storageService.remove("cep");
+  constructor(private storageService: LocalStorageService){
   }
 }
