@@ -25,3 +25,7 @@ figma: https://www.figma.com/file/SoXNbYt81v7WZjeq0HhZ9S/UTFPR-GYM?type=design&n
 - [ ] Utilizar a diretiva ngIf para controlar a exibição ou ocultação de elementos com base em condições específicas.
 - [ ] Formatar a apresentação de dados com Pipes, de acordo com os requisitos do aplicativo.
 - [x] Executar o processo de build da aplicação e realizar o deploy para tornar o aplicativo acessível online.
+
+
+Ghpages: https://avastt.github.io/gerenciador-academia/
+Apresentação: https://www.loom.com/share/78e1b32f43984b4fac5ac0710ba16940?sid=04d6032f-cfe1-43b8-a7ae-6d232ffe8280
