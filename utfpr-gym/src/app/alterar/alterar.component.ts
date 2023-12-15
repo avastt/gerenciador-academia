@@ -15,6 +15,9 @@ export class AlterarComponent {
 
 
   alterarCliente() {
+
+    this.validarCEP(this.clienteAlterar.cep);
+
     // Obtém a lista inicial do LocalStorage
     this.listaDeClientes = this.storageService.get("clientes") || [];
 
@@ -28,6 +31,12 @@ export class AlterarComponent {
     } else {
       console.error('Cliente não encontrado para alteração.');
     }
+  }
+
+  validarCEP(cep: string): boolean {
+    // Expressão regular para verificar se o CEP tem o formato correto (XXXXXXXX)
+    const regexCEP = /^[0-9]{8}$/;
+    return regexCEP.test(cep);
   }
 
   constructor(private storageService: LocalStorageService){

@@ -13,6 +13,8 @@ export class AdicionarComponent implements OnInit, OnChanges {
   clienteAtual: Cliente = new Cliente('', '', '', '', '', '', ''); // Objeto temporário para armazenar dados do formulário
 
   salvarCliente() {
+
+    this.validarCEP(this.clienteAtual.cep);
     // Obtém a lista inicial do LocalStorage
     const listaInicial = this.storageService.get("clientes");
   
@@ -42,6 +44,12 @@ export class AdicionarComponent implements OnInit, OnChanges {
   
     // Salva a lista atualizada no LocalStorage
     this.storageService.set("clientes", this.listaDeClientes);
+  }
+
+  validarCEP(cep: string): boolean {
+    // Expressão regular para verificar se o CEP tem o formato correto (XXXXXXXX)
+    const regexCEP = /^[0-9]{8}$/;
+    return regexCEP.test(cep);
   }
 
    adicionar: 'adicionar'
