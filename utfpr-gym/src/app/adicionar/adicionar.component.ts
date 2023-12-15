@@ -14,8 +14,17 @@ export class AdicionarComponent implements OnInit, OnChanges {
 
   salvarCliente() {
     // Obtém a lista inicial do LocalStorage
-    this.listaDeClientes = this.storageService.get("clientes") || [];
-
+    const listaInicial = this.storageService.get("clientes");
+  
+    // Verifica se a lista inicial é uma array
+    if (Array.isArray(listaInicial)) {
+      // Atribui a lista inicial a this.listaDeClientes
+      this.listaDeClientes = listaInicial;
+    } else {
+      // Se não for uma array, inicializa this.listaDeClientes como uma array vazia
+      this.listaDeClientes = [];
+    }
+  
     // Adiciona o cliente atual à lista
     this.listaDeClientes.push(
       new Cliente(
@@ -28,10 +37,11 @@ export class AdicionarComponent implements OnInit, OnChanges {
         this.clienteAtual.cep
       )
     );
-
-    console.log(this.listaDeClientes)
-
-    this.storageService.set("clientes", this.listaDeClientes)
+  
+    console.log(this.listaDeClientes);
+  
+    // Salva a lista atualizada no LocalStorage
+    this.storageService.set("clientes", this.listaDeClientes);
   }
 
    adicionar: 'adicionar'

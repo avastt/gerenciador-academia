@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LocalStorageService } from '../local-storage.service';
+import { Cliente } from '../Cliente';
 
 
 @Component({
@@ -9,24 +10,26 @@ import { LocalStorageService } from '../local-storage.service';
 })
 export class AlterarComponent {
 
-  updateEmail: String
-  updateNome: String
-  updateNascimento: String
-  updateEndereco: String
-  updateComplemento: String
-  updateCidade: String
-  updateCep: String
+  listaDeClientes: Cliente[] = [];
+  clienteAlterar: Cliente = new Cliente('', '', '', '', '', '', ''); // Objeto temporário para armazenar dados do formulário
 
-  constructor(private storageService: LocalStorageService){
+
+  alterarCliente() {
+    // Obtém a lista inicial do LocalStorage
+    this.listaDeClientes = this.storageService.get("clientes") || [];
+
+    const indiceCliente = this.listaDeClientes.findIndex(cliente => cliente.email === this.clienteAlterar.email);
+
+    // Se o cliente existir, altera os dados
+    if (indiceCliente !== -1) {
+      this.listaDeClientes[indiceCliente] = this.clienteAlterar;
+      console.log(this.listaDeClientes)
+      this.storageService.set("clientes", this.listaDeClientes);
+    } else {
+      console.error('Cliente não encontrado para alteração.');
+    }
   }
 
-  onClick(): void {
-    this.storageService.set("email", this.updateEmail);
-    this.storageService.set("nome", this.updateNome);
-    this.storageService.set("nascimento", this.updateNascimento);
-    this.storageService.set("endereco", this.updateEndereco);
-    this.storageService.set("complemento", this.updateComplemento);
-    this.storageService.set("cidade", this.updateCidade);
-    this.storageService.set("cep", this.updateCep);
+  constructor(private storageService: LocalStorageService){
   }
 }

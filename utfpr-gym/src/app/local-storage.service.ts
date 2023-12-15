@@ -21,6 +21,14 @@ export class LocalStorageService {
     return false;
   }
 
+  update(key: string, index: number,  cliente: Cliente): boolean {
+    if (this.storage) {
+      this.storage.setItem(key, JSON.stringify(cliente));
+      return true;
+    }
+    return false;
+  }
+
  /* saveList(key: string, list: Cliente[]): void {
     const listAsString = JSON.stringify(list);
     this.storage.setItem(key, listAsString);

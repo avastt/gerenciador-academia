@@ -14,7 +14,7 @@ export class ListarComponent {
   constructor(private storageService: LocalStorageService){
     
     this.listaDeClientes = storageService.get("clientes");
-    console.log(this.listaDeClientes)
+    console.log(storageService.get("clientes"))
   }
 
 }
